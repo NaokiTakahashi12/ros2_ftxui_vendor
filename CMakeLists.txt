@@ -26,6 +26,7 @@ if(NOT ftxui_FOUND OR "${ftxui_VERSION}" VERSION_LESS "${ftxui_package_version}"
 
   list(APPEND extra_cmake_args "-D CMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}")
   list(APPEND extra_cmake_args "-D CMAKE_INSTALL_PREFIX=${ftxui_install_dir}")
+  list(APPEND extra_cmake_args "-D CMAKE_POSITION_INDEPENDENT_CODE=ON")
 
   if(DEFINED CMAKE_BUILD_TYPE)
     list(APPEND extra_cmake_args "-D CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}")
